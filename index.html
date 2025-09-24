@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>https://github.com/otya123/810/tree/main
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>野獣先輩伝説サイト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>野獣先輩伝説サイト</h1>
+  </header>
+
+  <nav>
+    <a href="#profile">プロフィール</a>
+    <a href="#contents">名言まとめ</a>
+  </nav>
+
+  <section id="profile" class="section profile">
+    <h2>野獣先輩プロフィール</h2>
+    <img src="yjsnpi.png" alt="野獣先輩アイコン">
+    <div class="bio">
+      名前：田所浩二<br>
+    </div>
+  </section>
+
+  <section id="contents" class="section fan-content">
+    <h2>伝説まとめ</h2>
+    <div class="bubble">名言その1：ま、多少はね？</div>
+    <div class="bubble">名言その2：はっきり分かんだね。</div>
+    <div class="bubble">名言その3：+悔い改めて+</div>
+  </section>
+
+  <footer>
+    &copy; 2025 野獣先輩伝説サイト | ファンサイト
+  </footer>
+
+  <script>
+    const bubbles = document.querySelectorAll('.bubble');
+    window.addEventListener('scroll', () => {
+      bubbles.forEach((b, i) => {
+        const offset = window.scrollY / (i + 1);
+        b.style.transform = `translateY(${-40 + offset % 40}px)`;
+      });
+    });
+  </script>
+</body>
+</html>
